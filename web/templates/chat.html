@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Chat</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;background:#dde5df;color:#1f3d2d}.card{max-width:860px;margin:16px auto;background:#fff;border:1px solid #d7e4db;border-radius:12px;padding:18px}
+a.btn,button{background:#149b50;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;border:none}
+.msg{min-height:220px;border:1px solid #d7e4db;padding:10px;border-radius:10px;margin:12px 0}
+.row{display:flex;gap:8px}.grow{flex:1}
+</style></head><body>
+<div class="card">
+  <p><a class="btn" href="/lobby">←</a> <span style="font-size:24px">{{pfp}}</span> <strong>{{room}}</strong> <span style="float:right">📞 📹</span></p>
+  <div class="msg">{{messages}}</div>
+  <form method="post" action="/chat/{{room_url}}" class="row">
+    <input class="grow" name="message" placeholder="Chatting with sent able"/>
+    <button type="button">😊</button><button type="button">GIF</button><button type="button">🧷</button><button type="submit">Send</button>
+  </form>
+</div>
+</body></html>

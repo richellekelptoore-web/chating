@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Lobby</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;background:#edf4ee;color:#1f3d2d} .card{max-width:860px;margin:16px auto;background:#fff;border:1px solid #d7e4db;border-radius:12px;padding:18px}
+a.btn,button{background:#149b50;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;border:none}
+</style></head><body>
+<div class="card">
+  <p><a class="btn" href="/new-room">+ New Chat</a></p>
+  <form method="post" action="/edit-profile">
+    <input name="username" placeholder="edit username"/>
+    <select name="pfp"><option>👤</option><option>😎</option><option>🦊</option><option>🖼️</option></select>
+    <button>Save Profile</button>
+  </form>
+  <h3>Lobby | {{pfp}} {{username}}</h3>
+  <ul>{{rooms}}</ul>
+  <p><a class="btn" href="/downloads">Official Downloads</a></p>
+</div>
+</body></html>
